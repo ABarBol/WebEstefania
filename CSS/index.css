@@ -100,15 +100,15 @@
     }
 
     main section:nth-child(3) .one:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section1Big.jpg);
+        background-image: linear-gradient(rgba(168, 0, 73, 1), rgba(0, 0, 0, 1));
     }
 
     main section:nth-child(3) .two:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section2Big.jpg);
+        background-image: linear-gradient(rgba(168, 0, 73, 1), rgba(0, 0, 0, 1));
     }
 
     main section:nth-child(3) .three:hover {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section3Big.jpg);
+        background-image: linear-gradient(rgba(168, 0, 73, 1), rgba(0, 0, 0, 1));
     }
 
     main section:nth-child(3) div:hover div {
@@ -119,17 +119,17 @@
     main section:nth-child(3) div div {
         text-align: center;
         visibility: hidden;
-        border: 1px solid white;
+        border: 2px solid white;
         color: white;
-        font-weight: lighter;
     }
 
     .link {
-        padding: 10px;
+        padding: 50px;
     }
 
-    main section div div h5 {
-        font-weight: lighter;
+    main section div div span {
+        font-size: 20p;
+        font-weight: bolder;
     }
 
     .articleText {
