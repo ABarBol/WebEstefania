@@ -1,0 +1,319 @@
+/*Tipografía general*/
+@import url(../Tipografías/Roboto/Roboto-Thin.ttf);
+
+/*Tipografía exclusiva del logo*/
+@font-face {
+    font-family: 'Logo';
+    src: url('../Tipografías/BeMyDiamond.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-rows: 200px 3.5fr 300px;
+    /*Si modificas esto debes modificar el top de la imagen de index*/
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 2%;
+}
+
+header a {
+    display: flex;
+    flex-direction: row;
+}
+
+header a:hover img {
+    filter: drop-shadow(2px 2px 1px gray);
+}
+
+header a:hover .headerTitle h1 {
+    text-shadow: 2px 2px 1px gray;
+}
+
+#logoZone {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerTitle {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle h1 {
+    margin-left: -20px;
+    font-family: 'Logo', sans-serif;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    /*Realmente solo lo hacemos flex para centrar*/
+}
+
+nav label {
+    display: none;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+
+nav ul li:hover {
+    color: #835C00;
+    cursor: pointer;
+}
+
+
+nav ul li:nth-child(1),
+nav ul li:nth-child(2) {
+    padding-top: 1em;
+}
+
+
+#menu {
+    display: none;
+}
+
+
+.fa-user,
+.fa-cart-shopping {
+    font-size: xx-large;
+}
+
+
+footer {
+    width: 100%;
+    background-color: white;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2%;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #835C00;
+}
+
+.footerMap iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.footerMap {
+    height: 100%;
+    align-self: center;
+}
+
+
+.footerRRSS {
+    padding: 0px 30px;
+    display: flex;
+    align-self: end;
+    justify-content: end;
+}
+
+.verMapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verMapa span {
+    visibility: hidden;
+    padding: 5px;
+
+}
+
+.redes {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-square-x-twitter {
+    display: flex;
+    color: #FF0070;
+    font-size: xxx-large;
+}
+
+.fa-square-facebook:hover,
+.fa-square-instagram:hover,
+.fa-square-x-twitter:hover {
+    color: #835C00;
+}
+
+.footerText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    color: #000;
+    padding: 5px;
+}
+
+.footerText a {
+    padding-top: 10px;
+    align-self: center;
+}
+
+/*CSS de todos los botones*/
+
+button {
+    display: inline-block;
+    padding: 20px 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #A80049;
+    color: #fff;
+    border: none;
+}
+
+button:hover {
+    background: #835C00;
+}
+
+
+
+/*Punto de rutura extra por estética del header*/
+
+@media (max-width: 830px) {
+    nav ul {
+        gap: 20px;
+    }
+}
+
+
+
+/*
+EN CUENTA PARA LOS PUNTOS DE RUTURA 
+width < 768 el header se rompe por el h1
+*/
+
+@media (max-width: 769px) {
+
+    body {
+        display: grid;
+        grid-template-rows: 170px auto auto;
+        /*equivalente a toda pantalla*/
+    }
+
+
+    header {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    nav {
+        position: fixed;
+        left: 10px;
+        align-self: start;
+
+    }
+
+    nav label {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    #myUl {
+        display: none;
+    }
+
+
+    nav label .material-symbols-outlined {
+        padding: 0 5px;
+        font-size: 5em;
+    }
+
+
+
+    nav label:hover .material-symbols-outlined {
+        color: #FF98C5;
+        cursor: pointer;
+    }
+
+
+    #menu:checked~#myUl {
+        display: block;
+    }
+
+    #myUl li {
+        border-radius: 50%;
+        display: block;
+        text-align: center;
+        background: #fff;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 100px;
+        padding: 35px;
+
+    }
+
+
+    #myUl li:nth-child(2) {
+        padding: 40px 18px;
+
+    }
+
+    #myUl li:nth-child(1) {
+        padding: 30px 18px;
+
+    }
+
+    /*Nos cargamos el h1 del logo*/
+    #logoZone h1 {
+        display: none;
+    }
+
+    #logoZone img {
+        height: 6em;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        height: initial;
+    }
+
+    .footerMap {
+        display: none;
+    }
+
+    .verMapa span {
+        visibility: visible;
+    }
+
+}

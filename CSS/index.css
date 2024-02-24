@@ -1,0 +1,249 @@
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #ImagenTodaPantalla {
+        position: relative;
+        top: -200px;
+        /*Si modificas esto debes modificar el height del header*/
+        background-image: url(../Imagenes/HeaderBig.jpg);
+        background-size: cover;
+        background-position: 70%;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    #ImagenTodaPantalla div {
+        padding: 30px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+        background-color: rgb(255, 255, 255, 0.5);
+    }
+
+    #ImagenTodaPantalla div h1 {
+        text-align: center;
+    }
+
+    #ImagenTodaPantalla div>*:not(button) {
+        padding: 20px;
+    }
+
+
+    /*Audio ejecutado por JavaScript*/
+    #audioPlayer {
+        display: none;
+    }
+
+    /* MUY IMPORTANTE para corregir el top -100px de la imagen a toda pantalla*/
+    main section:nth-child(1) {
+        margin-bottom: -100px;
+        width: 100%;
+    }
+
+
+    main section:nth-child(2) article {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        margin: -50px 20px auto;
+    }
+
+    main section:nth-child(2) article h1 {
+        text-align: center;
+        font-weight: lighter;
+        font-size: xx-large
+    }
+
+    .articleImg2 {
+        display: none;
+    }
+
+    main section:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        height: 60vh;
+        padding: 25px;
+    }
+
+    main section:nth-child(3)>div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border: 15px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main section:nth-child(3) .one {
+        background-image: url(../Imagenes/Section1Big.jpg)
+    }
+
+    main section:nth-child(3) .two {
+        background-image: url(../Imagenes/Section2Big.jpg)
+    }
+
+    main section:nth-child(3) .three {
+        background-image: url(../Imagenes/Section3Big.jpg)
+    }
+
+    main section:nth-child(3) .one:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section1Big.jpg);
+    }
+
+    main section:nth-child(3) .two:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section2Big.jpg);
+    }
+
+    main section:nth-child(3) .three:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../Imagenes/Section3Big.jpg);
+    }
+
+    main section:nth-child(3) div:hover div {
+        visibility: visible;
+    }
+
+
+    main section:nth-child(3) div div {
+        text-align: center;
+        visibility: hidden;
+        border: 1px solid white;
+        color: white;
+        font-weight: lighter;
+    }
+
+    .link {
+        padding: 10px;
+    }
+
+    main section div div h5 {
+        font-weight: lighter;
+    }
+
+    .articleText {
+        line-height: 1.5em;
+    }
+
+    .articleText p {
+        padding: 10px 0;
+    }
+
+    .centrado {
+        text-align: center;
+    }
+
+    .centrado span {
+        font-weight: bolder;
+    }
+
+    /*Cesta vibrando */
+
+    .vibrando:hover {
+        animation: 0.1s vibrate infinite;
+    }
+
+    @keyframes vibrate {
+        0% {
+            transform: translateY(2px);
+        }
+
+
+        50% {
+            transform: translateY(-2px);
+        }
+
+        100% {
+            transform: translateY(2px);
+        }
+    }
+
+
+    @media (max-width: 769px) {
+
+        #ImagenTodaPantalla {
+            justify-content: start;
+            top: -170px;
+            /*equivalente a header*/
+        }
+
+        #ImagenTodaPantalla div {
+            width: 100%;
+        }
+
+        #ImagenTodaPantalla div h1,
+        #ImagenTodaPantalla div p {
+            width: 70%;
+        }
+
+        #ImagenTodaPantalla div p {
+            font-size: small;
+        }
+
+        #ImagenTodaPantalla div h1 {
+            text-align: left;
+            margin-bottom: -30px;
+
+        }
+
+        main section:nth-child(2) article {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main section:nth-child(2) {
+            margin-top: -50px;
+        }
+
+        main section:nth-child(2) article h1 {
+            font-size: x-large
+        }
+
+        .articleImg {
+            display: none;
+        }
+
+        .articleImg2 {
+            display: block;
+        }
+
+        main section:nth-child(3) {
+            height: auto;
+            display: grid;
+            grid-template:
+                "a a b b" 300px
+                "c c c c" 400px
+        }
+
+        main section:nth-child(3) div {
+            background-size: cover;
+            background-position: center;
+        }
+
+        main section:nth-child(3) div:nth-child(1) {
+            grid-area: c;
+        }
+
+        main section:nth-child(3) div:nth-child(2) {
+            grid-area: a;
+        }
+
+        main section:nth-child(3) div:nth-child(3) {
+            grid-area: b;
+        }
+
+        main section:nth-child(3)>div {
+            padding: 30px;
+        }
+    }

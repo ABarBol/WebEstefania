@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RQ3JQF1TG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8RQ3JQF1TG');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Encuentra las rosas más exclusivas en nuestra tienda Rosas de Afrodita, tu tienda de rosas para regalos románticos y arreglos florales. ">
+    <meta name="keywords"
+        content="tienda de rosas, rosas de afrodita, arreglos florales, rosas exclusivas, regalos románticos">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/access.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/4bbae93c2b.js" crossorigin="anonymous"></script>
+    <script defer src="JS/Acess.js"></script>
+    <title>Acceso | Tienda de rosas Afrodita</title>
+</head>
+
+<body>
+    <header>
+        <a href="Index.html">
+            <div id="logoZone">
+                <img src="Imagenes/icono_borde_original.svg" alt="Logo de Rosas de Afrodita">
+                <div class="headerTitle">
+                    <h1>rosas de afrodita</h1>
+                </div>
+            </div>
+        </a>
+        <nav>
+            <div id="navigationZone">
+                <input type="checkbox" id="menu">
+                <label for="menu"><span class="material-symbols-outlined">
+                        menu
+                    </span></label>
+                <ul id="myUl">
+                    <li><a href="AboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="Contact.html">Contacto</a></li>
+                    <li><a href="Access.html" title="Perfil"><i class="fa-solid fa-user"></i></a></li>
+                    <li>
+                        <a href="Error404.html" title="Comprar"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="titles">
+            <h1>Por favor</h1>
+            <h2>Rellene su formulario de acceso</h2>
+        </div>
+        <div class="myRows">
+            <section id="form1">
+                <h3>Login</h3>
+                <form action="Index.html" method="post">
+                    <label for="nickname">Nombre de usuario:</label>
+                    <input type="text" name="nickname" id="nickname">
+                    <label for="usermail">Email</label>
+                    <input type="email" name="usermail" id="usermail">
+                    <label for="userpass">Contraseña:</label>
+                    <input type="password" name="userpass" id="userpass">
+                    <div class="labelAndInput"><input type="checkbox" name="rememberme" id="rememberme"><label
+                            for="rememberme">Recuerdame:</label>
+
+                    </div>
+                    <button>Conectarse</button>
+                </form>
+                <button class="noAccount" onclick="change('a')">No tengo una cuenta</button>
+            </section>
+            <div class="divSeparador"></div>
+            <section id="form2" class="quitDisplay">
+                <h3>Registrarse</h3>
+                <form action="Index.html" method="post">
+                    <label for="nickname1">Nombre de usuario:</label>
+                    <input type="text" name="nickname1" id="nickname1">
+                    <label for="usermail1">Email</label>
+                    <input type="email" name="usermail1" id="usermail1">
+                    <label for="userpass1">Contraseña:</label>
+                    <input type="password" name="userpass1" id="userpass1">
+                    <label for="confirmpass1">Contraseña:</label>
+                    <input type="password" name="confirmpass1" id="confirmpass1">
+                    <div class="labelAndInput"><input type="checkbox" name="rememberme1" id="rememberme1"><label
+                            for="rememberme1">Recuerdame:</label>
+
+                    </div>
+                    <button>Registrarse</button>
+                </form>
+                <button class="noAccount" onclick="change('b')">Ya tengo una cuenta</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footerText">
+            <div>
+                <p>2023. Rosa de Afrodita.</p>
+                <p>Todos los derechos reservados.</p>
+            </div>
+            <a href="https://acortar.link/SA6ABh">Aviso Legal</a>
+
+        </div>
+        <div class="footerMap"><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.5956052983915!2d-8.426339324200821!3d42.09471325182467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2579b59f82f11f%3A0x63d41090aa8244f7!2sIES%20Pazo%20Da%20Merc%C3%A9!5e0!3m2!1ses!2ses!4v1701790287226!5m2!1ses!2ses"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="footerRRSS">
+            <div class="verMapa">
+                <span><a href="https://maps.app.goo.gl/nENrsNK2f4BHBvaB7">Ver Mapa</a></span>
+                <div class="redes">
+                    <a href="https://www.facebook.com/" title="Enlace a facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/" title="Enlace a instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://twitter.com/" title="Enlace a twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

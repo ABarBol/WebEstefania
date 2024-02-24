@@ -1,0 +1,150 @@
+body {
+    background-image: url(../Imagenes/HeaderBig.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titles {
+    margin: 0;
+    padding: 0 100px;
+
+}
+
+.titles h1, h2 {
+    width: 60%;
+    padding: 0 30px;
+    font-weight: lighter;
+}
+
+.myRows {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    height: 100%;
+}
+
+.myRows section {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.myRows h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: lighter;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+form input:not(input[type='checkbox']) {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+form label {
+    align-self: start;
+    padding: 5px;
+}
+
+input[type='checkbox'] {
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari y Chrome */
+    -o-transform: scale(2); /* Opera */
+    margin: 10px;
+}
+
+.labelAndInput {
+    display: inline-flex;
+}
+
+
+.divSeparador {
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+
+form button {
+    border: 1px solid black;
+    width: 100%;
+    padding: 20px 40px;
+    
+}
+
+form button:hover {
+    padding: 20px 40px;
+}
+
+.noAccount {
+    display: none;
+}
+
+
+
+footer {
+    margin-top: 30px;
+    height: 100%;
+}
+
+@media (max-width: 769px) {
+    body {
+        background-image: url(../Imagenes/fondo\ -\ copia.jpg);
+    }
+
+    .myRows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titles h1, h2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .quitDisplay {
+        display: none;
+    }
+
+    .noAccount, .noAccount:hover{
+        all: unset;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+}

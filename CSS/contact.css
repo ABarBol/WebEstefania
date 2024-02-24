@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Importante */
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+body {
+    background-image: url(../Imagenes/HeaderBig.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+fieldset {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input,
+textarea,
+select {
+    cursor: pointer;
+}
+
+textarea,
+select {
+    border: 1px solid black;
+    background-color: white;
+    resize: both;
+}
+
+
+h1,
+h4 {
+    font-weight: lighter;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin-top: 10px;
+    border: 1px solid #FF0070;
+}
+
+#chat {
+    width: 30px;
+    height: 30px;
+}
+
+.mainDiv {
+    display: inline-flex;
+    gap: 10px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    gap: 30px;
+    margin: 30px;
+}
+
+fieldset {
+    border: 1px solid #FF0070;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: end;
+    width: 100%;
+}
+
+fieldset input {
+    font-size: 20px;
+}
+
+fieldset div {
+    justify-content: end;
+}
+
+/** Animación de giro boton **/
+
+.contenedor-padre {
+    background-color: transparent;
+    width: 200px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.contenedor-hijo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.contenedor-padre:hover .contenedor-hijo {
+    transform: rotateX(180deg);
+}
+
+.boton-rosa,
+.boton-marron {
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.boton-rosa,.boton-rosa:hover {
+    background-color: #A80049;
+    color: #fff;
+}
+
+.boton-marron, .boton-marron:hover{
+    background-color: #835C00;
+    color: white;
+    transform: rotateX(180deg);
+}
+
+@media (max-width: 769px) {
+    form {
+        font-size: smaller;
+        align-items: center;
+    }
+
+    form input,
+    form select,
+    form textarea,
+    form button {
+        width: 100%;
+    }
+
+    fieldset div {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .radio {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .radio>* {
+        width: max-content;
+    }
+
+
+
+
+}
