@@ -20,11 +20,11 @@ main {
 
 .titles {
     margin: 0;
-    padding: 0 100px;
+    padding: 10px 100px;
 
 }
 
-.titles h1, h2 {
+.titles h2,span {
     width: 60%;
     padding: 0 30px;
     font-weight: lighter;
